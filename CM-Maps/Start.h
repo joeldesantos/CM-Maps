@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <Google/Analytics.h>
 
-@interface Start : UIViewController
-
+@interface Start : UIViewController<CLLocationManagerDelegate>
+@property (strong, nonatomic)   CLLocationManager   *locationManager;
+@property (strong, nonatomic)   CLLocation          *location;
+@property (strong, nonatomic) IBOutlet UILabel *lblCountry;
+@property (strong, nonatomic) IBOutlet UILabel *lblName;
 
 @end
 
